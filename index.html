@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+        
+        //Задача 1
+
+        alert ("Мазе бот v1 на Вашите услуги");
+        
+        //Задача 2
+
+        let playerFirstName     = prompt("Как се казваш - първо име ?");
+        let playerSecondName    = prompt("Как се казваш - фамилия ?");
+        let playerAge           = prompt("На колко години си ?");
+        let playerGender        = prompt("Какъв пол си ?");
+
+        console.log(`Първо име ${playerFirstName}`);
+        console.log(`Фамилия ${playerSecondName}`);
+        console.log(`Възраст ${playerAge}`);
+        console.log(`Пол ${playerGender}`);
+
+
+        let isPlayerUnderaged       = playerAge < 18;
+        let isPlayerAnAdoult        = playerAge >= 18;
+        let isPlayerFemale = playerGender == "жена";
+        let isPlayerMale = playerGender == "мъж";
+
+        
+
+        if(isPlayerAnAdoult && isPlayerMale) {
+            console.log(`Здравейте г-н ${playerSecondName}`);
+        } else if(isPlayerAnAdoult && isPlayerFemale) {
+            console.log(`Здравейте г-жо ${playerSecondName}`);
+        } else if(isPlayerUnderaged && isPlayerMale) {
+            console.log(`Здрасти малкия, не пускаме дечица тука - бягай за бира`);
+        } else if(isPlayerUnderaged && isPlayerFemale) {
+            console.log(`Здрасти малката, не пускаме дечица тука - бягай за бира`);
+        }
+        
+        //Задача 3
+
+        alert (`Добре дошъл в мазето на баба ${playerFirstName} ${playerSecondName}`);
+        alert (`Ти си на ${playerAge} години`);
+
+        //Задача 4
+
+        let appleWine = "ябълково вино";
+        let smokedMeat = "пушено месо";
+        let plumJam = "сливов мармалад";
+        let marinatedPeppers = "мариновани чушки";
+        let pigletPiggyBank = "прасенце касичка";
+
+
+        //Задача 5
+
+        let appleWineQuantity = 10;
+        let smokedMeatQuantity = 5;
+        let plumJamQuantity = 9;
+        let marinatedPeppersQuantity = 4;
+        let pigletPiggyBankAmount = 184.35;
+        
+        //Задача 6
+
+        let appleWineArticleNumber = `C7544_${appleWineQuantity}`;
+        let smokedMeatArticleNumber = `M7441_${smokedMeatQuantity}`;
+        let plumJamArticleNumber = `S6491_${plumJamQuantity}`;
+        let marinatedPeppersArticleNumber = `P7485_${marinatedPeppersQuantity}`;
+        let pigletPiggyBankArticleNumber = `B6584_${pigletPiggyBankAmount}`;
+
+        //Задача 7
+
+        alert("Отчет за продуктите в мазето");
+
+        console.log(appleWine, appleWineQuantity, appleWineArticleNumber);
+        console.log(smokedMeat, smokedMeatQuantity, smokedMeatArticleNumber);
+        console.log(plumJam, plumJamQuantity, plumJamArticleNumber);
+        console.log(marinatedPeppers, marinatedPeppersQuantity, marinatedPeppersArticleNumber);
+        console.log(pigletPiggyBank,pigletPiggyBankAmount, pigletPiggyBankArticleNumber);
+
+        //Задача 8
+
+        if(isPlayerAnAdoult) {
+            let donationQuestion = prompt("Искате ли да направите дарение да / не");
+            let isDonationResponseQualified = donationResponse == "да";
+        
+        if(isDonationResponseQualified) {
+
+            let donationAmmount = prompt("Сумата на вашето дарение?");
+            let donationVat = (donationAmmount * 20) / 100; 
+            let totalAmmount = donationAmmount + donationVat;
+            alert(`Дължите сумата от ${totalAmmount}`);
+
+
+        } else {
+            alert("Щедростта е добродетел");
+        }
+        
+        }
+
+    </script>
+</body>
+</html>
